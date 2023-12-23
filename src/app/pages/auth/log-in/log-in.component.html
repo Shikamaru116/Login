@@ -1,0 +1,41 @@
+<!-- Mi main del login -->
+
+<main>
+  <div class="card_">
+      <form [formGroup]="form" (ngSubmit)="logIn()">
+          <h1>Login</h1>
+
+          <div class="input_box">
+              <input type="text" placeholder="email" formControlName="email" required>
+              <span class="material-icons">
+                  person_outline
+              </span>
+          </div>
+
+          <div class="input_box">
+              <input type="password" placeholder="Password"  formControlName="password" required>
+              <span class="material-icons">
+                  lock
+              </span>
+          </div>
+
+          <div class="contraseolvidada">
+              <a href="#">
+                  Olvide mi contraseña
+              </a>
+          </div>
+          <div class="conten">
+
+              <button type="submit" class="btn"> Login </button>
+          </div>
+
+          <div class="registrar">
+              <p>
+                  ¿No tienes una cuenta?
+                  <a routerLink="/auth/sign-up" routerLinkActive="active" ariaCurrentWhenActive="page" >Registrate</a>
+              </p>
+          </div>
+      </form>
+  </div>
+</main>
+

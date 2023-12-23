@@ -1,0 +1,44 @@
+<!-- Mi main del registro -->
+
+<main>
+  <div class="card_">
+      <form [formGroup]="form" (ngSubmit)="signUp()">
+          <h1>Registro</h1>
+
+          <div class="input_box">
+              <input type="text" placeholder="Username" formControlName="names" required>
+              <span class="material-icons">person_outline</span>
+          </div>
+
+          <div class="input_box">
+              <input type="text" placeholder="Last name" formControlName="lastName" required>
+              <span class="material-icons">person_outline</span>
+          </div>
+
+          <div class="input_box">
+              <input type="text" placeholder="Email" formControlName="email" required>
+              <span class="material-icons">email</span>
+          </div>
+
+          <div class="input_box">
+              <input type="password" placeholder="Password" formControlName="password" required>
+              <span class="material-icons">lock</span>
+          </div>
+
+          <div class="conten">
+              <button type="submit" class="btn">Registrarse</button>
+          </div>
+
+          <div class="registrar">
+              <p>
+                  ¿Ya tienes una cuenta?
+                  <a routerLink="/auth/log-in" routerLinkActive="active" ariaCurrentWhenActive="page">Iniciar sesión</a>
+              </p>
+          </div>
+      </form>
+  </div>
+</main>
+
+
+
+
